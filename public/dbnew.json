@@ -1,0 +1,308 @@
+{
+  "coffee": [
+    {
+      "id": 0,
+      "title": "Tanzania",
+      "imageUrl": "./img/tanzania.jpg",
+      "types": [
+        0,
+        1
+      ],
+      "category": 0,
+      "rating": 4,
+      "ingredients": "100% Арабика",
+      "details": {
+        "sm": {
+          "price": 130,
+          "weight": 200
+        },
+        "md": {
+          "price": 310,
+          "weight": 500
+        },
+        "lg": {
+          "price": 580,
+          "weight": 1000
+        }
+      },
+      "description": "Степень обжарки: светлее средней. Вкус: оттенки миндаля, персика и абрикоса. Послевкусие: чёрный шоколад и мёд."
+    },
+    {
+      "id": 1,
+      "title": "Burundi",
+      "imageUrl": "./img/burundi.jpg",
+      "types": [
+        0,
+        1
+      ],
+      "category": 0,
+      "rating": 6,
+      "ingredients": "100% Арабика",
+      "details": {
+        "sm": {
+          "price": 140,
+          "weight": 200
+        },
+        "md": {
+          "price": 320,
+          "weight": 500
+        },
+        "lg": {
+          "price": 590,
+          "weight": 1000
+        }
+      },
+      "description": "Степень обжарки: светлее средней. Вкус: вишневые и сливовые ноты с шоколодным финишем. Послевкусие: цветочные оттенки."
+    },
+    {
+      "id": 2,
+      "title": "Mexico",
+      "imageUrl": "./img/mexico.jpg",
+      "types": [
+        0,
+        1
+      ],
+      "category": 0,
+      "rating": 4,
+      "ingredients": "100% Арабика",
+      "details": {
+        "sm": {
+          "price": 115,
+          "weight": 200
+        },
+        "md": {
+          "price": 220,
+          "weight": 500
+        },
+        "lg": {
+          "price": 430,
+          "weight": 1000
+        }
+      },
+      "description": "Степень обжарки: средняя. Вкус: оттенки чёрного шоколада, пряный аромат. Послевкусие: орех."
+    },
+    {
+      "id": 3,
+      "title": "Kenya",
+      "imageUrl": "./img/kenya.jpg",
+      "types": [
+        0,
+        1
+      ],
+      "category": 0,
+      "rating": 2,
+      "ingredients": "100% Арабика",
+      "details": {
+        "sm": {
+          "price": 175,
+          "weight": 200
+        },
+        "md": {
+          "price": 340,
+          "weight": 500
+        },
+        "lg": {
+          "price": 670,
+          "weight": 1000
+        }
+      },
+      "description": "Степень обжарки: светлее средней. Вкус: цитрусовые (лимон, апельсин) и ягодные оттенки. Послевкусие: хлеб."
+    },
+    {
+      "id": 4,
+      "title": "Colombia Decaf",
+      "imageUrl": "./img/colombia_decaf.jpg",
+      "types": [
+        0,
+        1
+      ],
+      "category": 3,
+      "rating": 1,
+      "ingredients": "100% Арабика",
+      "details": {
+        "sm": {
+          "price": 140,
+          "weight": 200
+        },
+        "md": {
+          "price": 270,
+          "weight": 500
+        },
+        "lg": {
+          "price": 530,
+          "weight": 1000
+        }
+      },
+      "description": "Степень обжарки: средне-тёмная. Вкус: цветочный. Послевкусие: легкая горчинка."
+    },
+    {
+      "id": 5,
+      "title": "Uganda",
+      "imageUrl": "./img/uganda.jpg",
+      "types": [
+        0,
+        1
+      ],
+      "category": 0,
+      "rating": 2,
+      "ingredients": "100% Робуста",
+      "details": {
+        "sm": {
+          "price": 75,
+          "weight": 200
+        },
+        "md": {
+          "price": 140,
+          "weight": 500
+        },
+        "lg": {
+          "price": 270,
+          "weight": 1000
+        }
+      },
+      "description": "Степень обжарки: средне-тёмная. Вкус: терпкий, вяжущий. Послевкусие: горький шоколад и табачный лист."
+    },
+    {
+      "id": 6,
+      "title": "Vietnam Organic",
+      "imageUrl": "./img/vietnam_organic.jpg",
+      "types": [
+        0,
+        1
+      ],
+      "category": 2,
+      "rating": 9,
+      "ingredients": "100% Робуста",
+      "details": {
+        "sm": {
+          "price": 65,
+          "weight": 200
+        },
+        "md": {
+          "price": 120,
+          "weight": 500
+        },
+        "lg": {
+          "price": 230,
+          "weight": 1000
+        }
+      },
+      "description": "Степень обжарки: средне-тёмная. Вкус: горькое какао и жаренные злаки. Послевкусие: душистое с лёгкой горчинкой."
+    },
+    {
+      "id": 7,
+      "title": "Brazil Bourbon Organic",
+      "imageUrl": "./img/brazil_bourbon_organic.jpg",
+      "types": [
+        0,
+        1
+      ],
+      "category": 2,
+      "rating": 10,
+      "ingredients": "100% Арабика",
+      "details": {
+        "sm": {
+          "price": 130,
+          "weight": 200
+        },
+        "md": {
+          "price": 250,
+          "weight": 500
+        },
+        "lg": {
+          "price": 490,
+          "weight": 1000
+        }
+      },
+      "description": "Степень обжарки: средне-тёмная. Вкус: тонкая кислинка. Послевкусие: арахис, спелые фрукты и горький шоколад."
+    },
+    {
+      "id": 8,
+      "title": "Via Lattea",
+      "imageUrl": "./img/via_lattea.jpg",
+      "types": [
+        1
+      ],
+      "category": 1,
+      "rating": 5,
+      "ingredients": "100% Арабика",
+      "details": {
+        "sm": {
+          "price": 100,
+          "weight": 200
+        },
+        "md": {
+          "price": 500,
+          "weight": 200
+        }
+      },
+      "description": "Степень обжарки: средне-тёмная. Вкус: лёгкая горчинка. Послевкусие: винные оттенки с насыщенными ореховыми нотками."
+    },
+    {
+      "id": 9,
+      "title": "Caffe a Casa",
+      "imageUrl": "./img/caffe_a_casa.jpg",
+      "types": [
+        1
+      ],
+      "category": 1,
+      "rating": 5,
+      "ingredients": "50% Арабика / 50% Робуста",
+      "details": {
+        "sm": {
+          "price": 80,
+          "weight": 200
+        },
+        "md": {
+          "price": 160,
+          "weight": 200
+        }
+      },
+      "description": "Степень обжарки: средне-тёмная. Вкус: пряности."
+    },
+    {
+      "id": 10,
+      "title": "Coupage №5",
+      "imageUrl": "./img/coupage_№5.jpg",
+      "types": [
+        1
+      ],
+      "category": 1,
+      "rating": 5,
+      "ingredients": "100% Арабика",
+      "details": {
+        "sm": {
+          "price": 90,
+          "weight": 200
+        },
+        "md": {
+          "price": 180,
+          "weight": 200
+        }
+      },
+      "description": "Степень обжарки: средне-тёмная. Вкус: кислинка. Послевкусие: чёрный шоколад."
+    },
+    {
+      "id": 11,
+      "title": "Etnico",
+      "imageUrl": "./img/etnico.jpg",
+      "types": [
+        1
+      ],
+      "category": 1,
+      "rating": 7,
+      "ingredients": "100% Арабика",
+      "details": {
+        "sm": {
+          "price": 120,
+          "weight": 200
+        },
+        "md": {
+          "price": 240,
+          "weight": 200
+        }
+      },
+      "description": "Степень обжарки: средне-тёмная. Вкус: кислинка и приятная горечь. Послевкусие: карамель и какао."
+    }
+  ]
+}
