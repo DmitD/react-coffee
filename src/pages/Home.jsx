@@ -1,5 +1,6 @@
 import Categories from "../components/categories";
 import SortPopup from "../components/sortpopup";
+import CoffeeBlock from "../components/coffeeblock";
 
 const categoryNames = ['Зерновой', 'Молотый', 'Органический', 'Без кофеина'];
 const sortItems = [
