@@ -19,6 +19,11 @@ const Home = () => {
       <h2 className="content__title">Весь кофе</h2>
       <div className="content__items">
         <CoffeeBlock />
+        <CoffeeBlock />
+        <CoffeeBlock />
+        <CoffeeBlock />
+        <CoffeeBlock />
+        <CoffeeBlock />
       </div>
     </div>
   );

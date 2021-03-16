@@ -1,0 +1,38 @@
+@import '../variables';
+
+.coffee-block {
+    width: 24%;
+    text-align: center;
+    margin-bottom: 65px;
+    //margin-right: 3%;
+  
+     &:not(:nth-of-type(4n)) {
+       margin-right: 1%;
+     }
+  
+    &__image {
+      width: 50%;
+    }
+  
+    &__title {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    &__ingredients {
+        font-size: 16px;
+      } 
+  
+    &__bottom {
+      margin-top: 10px;
+    }
+  
+    &__price {
+      font-weight: 600;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
