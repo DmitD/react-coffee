@@ -20,8 +20,8 @@
       }
   
       span {
-        color: $orange;
-        border-bottom: 1px dashed $orange;
+        color: $brown;
+        border-bottom: 1px dashed $brown;
         cursor: pointer;
       }
     }
@@ -50,7 +50,7 @@
   
           &.active {
             font-weight: bold;
-            color: $orange;
+            color: $brown;
           }
         }
       }
