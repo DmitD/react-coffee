@@ -3,8 +3,7 @@ const SortPopup = (props) => {
   const { items } = props;
 
   return (
-    <div
-      className="sort">
+    <div className="sort">
       <div className="sort__label">
         <svg
           width="10"
