@@ -1,3 +1,7 @@
+import React from 'react';
+import { useSelector, useDispatch } from "react-redux";
+
+import { fetchCoffee } from '../redux/actions/coffee';
 import Categories from "../components/categories";
 import SortPopup from "../components/sortpopup";
 import CoffeeBlock from "../components/coffeeblock";
@@ -10,6 +14,16 @@ const sortItems = [
 ];
 
 const Home = () => {
+
+  const dispatch = useDispatch();
+  const items = useSelector(({ coffee }) => coffee.items);
+
+  React.useEffect(() => {
+    dispatch(fetchCoffee());
+  }, []);
+
+  console.log(items);
+
   return (
     <div className="container">
       <div className="content__top">
@@ -18,7 +32,11 @@ const Home = () => {
       </div>
       <h2 className="content__title">Весь кофе</h2>
       <div className="content__items">
-        <CoffeeBlock />
+        {items.map((obj) => (
+          <CoffeeBlock
+            key={obj.id}
+            {...obj}
+          />))}
       </div>
     </div>
   );

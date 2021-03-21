@@ -164,7 +164,7 @@
     },
     {
       "id": 6,
-      "title": "Vietnam Organic",
+      "title": "Vietnam Org",
       "imageUrl": "./img/vietnam_organic.jpg",
       "types": [
         0,
@@ -191,7 +191,7 @@
     },
     {
       "id": 7,
-      "title": "Brazil Bourbon Organic",
+      "title": "Brazil Bourbon Org",
       "imageUrl": "./img/brazil_bourbon_organic.jpg",
       "types": [
         0,
