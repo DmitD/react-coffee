@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import logo from '../../img/coffee-logo.svg';
 import Button from '../button';
 
@@ -7,6 +9,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="container">
+        <Link to="/">
           <div className="header__logo">
             <img width="60" height="60" src={logo} alt="Coffee logo" />
             <div className="header__logo__title">
@@ -14,7 +17,9 @@ const Header = () => {
               <p>самое вкусное кофе в мире</p>
             </div>
           </div>
+        </Link>
         <div className="header__cart">
+          <Link to="/cart">
             <Button className="button--cart">
               <span>0 грн</span>
               <div className="button__delimiter"></div>
@@ -48,6 +53,7 @@ const Header = () => {
               </svg>
               <span>0</span>
             </Button>
+          </Link>  
         </div>
       </div>
     </div>
