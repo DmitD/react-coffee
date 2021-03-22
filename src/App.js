@@ -1,5 +1,7 @@
+import {Route} from 'react-router-dom';
+
 import Header from "./components/header";
-import {Home} from "./pages"
+import {Home, Cart} from "./pages"
 
 
 function App() {
@@ -7,7 +9,8 @@ function App() {
     <div className="wrapper">
       <Header />
       <div className="content">
-        <Home />
+        <Route path="/" component={Home} exact />
+        <Route path="/cart" component={Cart} exact />
       </div>
     </div>
   );
