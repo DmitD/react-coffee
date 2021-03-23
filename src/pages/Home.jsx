@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Categories from "../components/categories";
 import SortPopup from "../components/sortpopup";
 import CoffeeBlock from "../components/coffeeblock";
+import CoffeeLoader from "../components/coffeeloader";
 import { fetchCoffee } from '../redux/actions/coffee';
 import { setCategory, setSortBy } from '../redux/actions/filters';
 
@@ -20,6 +21,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const items = useSelector(({ coffee }) => coffee.items);
   const { category, sortBy } = useSelector(({ filters }) => filters);
+  const isLoaded = useSelector(({ coffee }) => coffee.isLoaded);
 
   React.useEffect(() => {
     dispatch(fetchCoffee(category, sortBy));
@@ -47,11 +49,16 @@ const Home = () => {
       </div>
       <h2 className="content__title">Весь кофе</h2>
       <div className="content__items">
-        {items.map((obj) => (
-          <CoffeeBlock
-            key={obj.id}
-            {...obj}
-          />))}
+        {isLoaded
+            ? items.map((obj) => (
+                <CoffeeBlock
+                  key={obj.id}
+                  {...obj}
+                />
+            ))
+            : Array(12)
+              .fill(0)
+              .map((_, index) => <CoffeeLoader key={index} />)}
       </div>
     </div>
   );

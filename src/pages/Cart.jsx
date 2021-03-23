@@ -84,12 +84,10 @@ const Cart = () => {
               <div className="cart__bottom">
                 <div className="cart__bottom-details">
                   <span>
-                    {' '}
-                    Всего: <b>totalCount шт.</b>{' '}
+                    Всего: <b>totalCount шт.</b>
                   </span>
                   <span>
-                    {' '}
-                    Сумма заказа: <b>totalPrice грн</b>{' '}
+                    Сумма заказа: <b>totalPrice грн</b>
                   </span>
                 </div>
                 <div className="cart__bottom-buttons">
@@ -118,7 +116,7 @@ const Cart = () => {
             </div> */}
             <div className="cart cart--empty">
               <h2>
-                Корзина пустая <i>😕</i>
+                Корзина пустая <span>&#128521;</span> 
               </h2>
               <p>
                 Вероятней всего, вы не заказывали ещё кофе.
