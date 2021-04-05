@@ -11,13 +11,13 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  //opacity: 0;
   transition: 0.5s;
   pointer-events: none;
 }
 
 .modal-open {
-  opacity: 1;
+  //opacity: 1;
   pointer-events: all;
 }
 

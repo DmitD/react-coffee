@@ -9,16 +9,34 @@ import Button from "../button";
 const ModalOrder = (props) => {
 
   const availableTypes = ['зерно', 'молотый'];
-  const availableWeight = [200, 500, 1000];
+  const availableWeight = ["sm", "md", "lg"];
   const { openModal, closeModal } = props;
   const currentItem = useSelector(({ modal }) => modal.openedItem);
   const { title, imageUrl, types, ingredients, description, details } = currentItem;
   const [activeType, setActiveType] = React.useState(types[0]);
+  const [activeWeight, setActiveWeight] = React.useState(0);
+  const [itemsCount, setItemsCount] = React.useState(1);
 
   const onSelectType = (index) => {
     setActiveType(index);
   };
 
+  const onSelectWeight = (index) => {
+    setActiveWeight(index);
+  };
+
+  const changeCount = (val) => {
+    if (val === 'inc') {
+      setItemsCount(itemsCount + 1)
+    }
+    if (val === 'dec') {
+      if (itemsCount > 1) {
+        setItemsCount(itemsCount - 1)
+      }
+    }
+  };
+
+  const currentPrice = details[availableWeight[activeWeight]].price * itemsCount;
 
   return (
     // <div className={openModal ? "modal modal-open" : "modal"}>
@@ -69,14 +87,15 @@ const ModalOrder = (props) => {
               </ul>
               <ul>
                 {availableWeight.map((currentWeight, index) => (
+                  details.hasOwnProperty(currentWeight) &&
                   <li
                     key={currentWeight}
-                    //onClick={() => onSelectWeight(index)}
+                    onClick={() => onSelectWeight(index)}
                     className={classNames({
-                      //active: activeWeight === index,
-                      //disabled: !weight.includes(currentWeight),
+                      active: activeWeight === index,
+                      //disabled: !details.hasOwnProperty(currentWeight),
                     })}>
-                    {currentWeight} г
+                    {details[currentWeight].weight} г
                   </li>
                 ))}
               </ul>
@@ -84,8 +103,9 @@ const ModalOrder = (props) => {
             <div className='modal-order__number'>
               <p>Количество:</p>
               <div className="modal-order__number__item">
-                <div
-                  className="button button--outline button--circle modal-order__number__item-minus">
+                <Button
+                  className="button button--outline button--circle modal-order__number__item-minus"
+                  onClick={() => changeCount('dec')}>
                   <svg
                     width="10"
                     height="10"
@@ -101,10 +121,11 @@ const ModalOrder = (props) => {
                       fill="#EB5A1E"
                     />
                   </svg>
-                </div>
-                <b>1</b>
-                <div
-                  className="button button--outline button--circle modal-order__number__item-plus">
+                </Button>
+                <b>{itemsCount}</b>
+                <Button
+                  className="button button--outline button--circle modal-order__number__item-plus"
+                  onClick={() => changeCount('inc')}>
                   <svg
                     width="10"
                     height="10"
@@ -120,12 +141,12 @@ const ModalOrder = (props) => {
                       fill="#EB5A1E"
                     />
                   </svg>
-                </div>
+                </Button>
               </div>
             </div>
             <div className="modal-order__price">
               <p>Всего:</p>
-              <b>0 грн</b>
+              <b>{currentPrice} грн</b>
             </div>
           </div>
         </div>
