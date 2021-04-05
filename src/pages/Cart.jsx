@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import cartEmptyImage from '../img/empty-coffee-cart.png';
 
 const Cart = () => {
-    return (
-        <div className="container container--cart">
-{/*             <div className="cart">
+  return (
+    <div className="container container--cart">
+      {/*             <div className="cart">
               <div className="cart__top">
                 <h2 className="content__title">
                   <svg
@@ -114,22 +114,23 @@ const Cart = () => {
                 </div>
               </div>
             </div> */}
-            <div className="cart cart--empty">
-              <h2>
-                Корзина пустая <span>&#128521;</span> 
-              </h2>
-              <p>
-                Вероятней всего, вы не заказывали ещё кофе.
+      <div className="cart cart--empty">
+        <h2>
+          Корзина пустая <span>&#128521;</span>
+        </h2>
+        <p>
+          Вероятней всего, вы не заказывали ещё кофе.
                 <br />
                 Для того, чтобы заказать, перейдите на главную страницу.
               </p>
-              <img src={cartEmptyImage} alt="Empty cart" />
-              <Link to="/" className="button button--black">
-                <span>Вернуться назад</span>
-              </Link>
-            </div>
-        </div>
-      );
+        {/* <img src={cartEmptyImage} alt="Empty cart" /> */}
+        <div className="empty--image" ></div>
+        <Link to="/" className="button button--black">
+          <span>Вернуться назад</span>
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default Cart;

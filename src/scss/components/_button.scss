@@ -128,3 +128,48 @@
       }
     }
   }
+
+.pay-btn {
+    font-size: 16px;
+    font-weight: 600;
+    width: 200px;
+    padding: 14px;
+}
+
+.go-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  
+  border-color: darken($color: $gray-line, $amount: 10);
+
+  span {
+    color: darken($color: $gray-line, $amount: 20);
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &:hover {
+    background-color: darken($color: $gray-line, $amount: 90);
+    border-color: darken($color: $gray-line, $amount: 90);
+
+    span {
+      color: $gray-line;
+    }
+
+    svg {
+      path {
+        fill: darken($color: $gray-line, $amount: 90);
+      }
+    }
+  }
+
+  svg {
+    margin-right: 12px;
+    path {
+      fill: transparent;
+      stroke-width: 2;
+    }
+  }
+}

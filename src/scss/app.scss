@@ -69,11 +69,11 @@ body {
       color: #777777;
     }
 
-    img {
-      display: block;
-      width: 300px;
-      margin: 45px auto 60px;
-    }
+    // img {
+    //   display: block;
+    //   width: 300px;
+    //   margin: 45px auto 60px;
+    // }
 
     .button--black {
       padding: 12px 0 14px;
@@ -83,5 +83,11 @@ body {
       font-size: 18px;
     }
   }
+}
+.empty--image {
+  background: no-repeat center/110% url("../img/empty-coffee-cart.png");
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
 }
 

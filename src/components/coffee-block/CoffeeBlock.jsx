@@ -2,7 +2,14 @@ import Button from "../button";
 
 const CoffeeBlock = (props) => {
 
-  const { id, title, imageUrl, ingredients, details } = props;
+  const { id, title, imageUrl, types, ingredients, description, details, modalProductOpen } = props;
+
+  const onAddItem = () => {
+    const obj = {
+      id, title, imageUrl, types, ingredients, description, details
+    };
+    modalProductOpen(obj);
+  };
 
   return (
     <div className="coffee-block">
@@ -13,7 +20,7 @@ const CoffeeBlock = (props) => {
       </div>
       <div className="coffee-block__price">от {details.sm.price} грн</div>
       <div className="coffee-block__bottom">
-        <Button className="button--add">
+        <Button className="button--add" onClick={onAddItem}>
           <span>Добавить</span>
           <svg
             width="18"
@@ -45,7 +52,7 @@ const CoffeeBlock = (props) => {
           </svg>
         </Button>
       </div>
-    </div>
+    </div >
   );
 };
 
