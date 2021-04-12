@@ -1,6 +1,6 @@
-export const openModalProduct = (itemId) => ({
+export const openModalProduct = (item) => ({
   type: 'MODAL_PRODUCT_OPEN',
-  payload: itemId
+  payload: item
 });
 
 export const closeModalProduct = () => ({

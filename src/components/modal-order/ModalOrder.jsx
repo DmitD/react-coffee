@@ -10,9 +10,9 @@ const ModalOrder = (props) => {
 
   const availableTypes = ['зерно', 'молотый'];
   const availableWeight = ["sm", "md", "lg"];
-  const { openModal, closeModal } = props;
+  const { openModal, closeModal, onClickAddItem } = props;
   const currentItem = useSelector(({ modal }) => modal.openedItem);
-  const { title, imageUrl, types, ingredients, description, details } = currentItem;
+  const { id, title, imageUrl, types, ingredients, description, details } = currentItem;
   const [activeType, setActiveType] = React.useState(types[0]);
   const [activeWeight, setActiveWeight] = React.useState(0);
   const [itemsCount, setItemsCount] = React.useState(1);
@@ -37,6 +37,20 @@ const ModalOrder = (props) => {
   };
 
   const currentPrice = details[availableWeight[activeWeight]].price * itemsCount;
+
+  const onAddItemToCart = () => {
+    const obj = {
+      id,
+      title,
+      imageUrl,
+      type: availableTypes[activeType],
+      weight: details[availableWeight[activeWeight]].weight,
+      price: currentPrice,
+      count: itemsCount,
+    };
+    onClickAddItem(obj)
+    closeModal();
+  };
 
   return (
     // <div className={openModal ? "modal modal-open" : "modal"}>
@@ -169,7 +183,8 @@ const ModalOrder = (props) => {
             <span>Вернуться назад</span>
           </Button>
           <Link to="/cart">
-            <Button className="button pay-btn">
+            <Button className="button pay-btn"
+              onClick={onAddItemToCart}>
               <span>В корзину</span>
             </Button>
           </Link>

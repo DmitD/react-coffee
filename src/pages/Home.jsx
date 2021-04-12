@@ -5,11 +5,11 @@ import Categories from "../components/categories";
 import SortPopup from "../components/sort-popup";
 import CoffeeBlock from "../components/coffee-block";
 import CoffeeLoader from "../components/coffee-loader";
+import ModalOrder from "../components/modal-order";
 import { fetchCoffee } from "../redux/actions/coffee";
 import { setCategory, setSortBy } from "../redux/actions/filters";
 import { openModalProduct, closeModalProduct } from "../redux/actions/modal";
-import ModalOrder from "../components/modal-order/ModalOrder";
-
+import { addItemToCart } from "../redux/actions/cart";
 
 const categoryNames = ['Зерновой', 'Молотый', 'Органический', 'Без кофеина'];
 const sortItems = [
@@ -46,6 +46,10 @@ const Home = () => {
     dispatch(closeModalProduct())
   }
 
+  const handleAddItemToCart = (obj) => {
+    dispatch(addItemToCart(obj));
+  };
+
   return (
     <div className="container">
       <div className="content__top">
@@ -73,7 +77,9 @@ const Home = () => {
             .map((_, index) => <CoffeeLoader key={index} />)}
       </div>
       {/* <ModalOrder openModal={isModalOpen} closeModal={modalProductClose} /> */}
-      {isModalOpen && <ModalOrder closeModal={modalProductClose} />}
+      {isModalOpen &&
+        <ModalOrder closeModal={modalProductClose}
+          onClickAddItem={handleAddItemToCart} />}
     </div>
   );
 };
