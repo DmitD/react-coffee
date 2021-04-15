@@ -35,3 +35,24 @@
     }
   }
 }
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  animation: fixedMenu 1s forwards;
+}
+
+@keyframes fixedMenu {
+  0% {
+    padding: 40px 0;
+  }
+  50% {
+    padding: 25px 0;
+  }
+  100% {
+    padding: 10px 0;
+  }
+}

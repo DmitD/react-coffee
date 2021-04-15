@@ -1,10 +1,28 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../img/coffee-logo.svg';
 import Button from '../button';
+import { useSelector } from "react-redux";
 
 
 const Header = () => {
+
+  const { totalCount, totalPrice } = useSelector(({ cart }) => cart);
+
+  React.useEffect(() => {
+    window.onscroll = () => {
+      const header = document.querySelector(".header");
+      let scrollDistance = window.scrollY;
+      console.log(scrollDistance)
+      if (scrollDistance > 300) {
+        header.classList.add("header-fixed");
+      }
+      if (scrollDistance < 100) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  }, []);
 
   return (
     <div className="header">
@@ -21,7 +39,7 @@ const Header = () => {
         <div className="header__cart">
           <Link to="/cart">
             <Button className="button--cart">
-              <span>0 грн</span>
+              <span>{totalPrice} грн</span>
               <div className="button__delimiter"></div>
               <svg
                 width="18"
@@ -51,9 +69,9 @@ const Header = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span>0</span>
+              <span>{totalCount}</span>
             </Button>
-          </Link>  
+          </Link>
         </div>
       </div>
     </div>

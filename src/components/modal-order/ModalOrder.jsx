@@ -48,8 +48,8 @@ const ModalOrder = (props) => {
       price: currentPrice,
       count: itemsCount,
     };
-    onClickAddItem(obj)
-    closeModal();
+    onClickAddItem(obj);
+    closeModal()
   };
 
   return (
