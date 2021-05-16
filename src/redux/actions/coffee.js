@@ -6,8 +6,12 @@ export const fetchCoffee = (category, sortBy) => (dispatch) => {
     `http://localhost:3001/coffee?${category !== null ? `category=${category}` : ''}&_sort=${sortBy.type}&_order=${sortBy.order}`)
     .then(({ data }) => {
       dispatch(setCoffee(data));
+    })
+    .catch((error) => {
+      console.log(error);
+      dispatch(setError(true));
     });
-    dispatch(setLoader(false));
+  dispatch(setLoader(false));
 };
 
 export const setCoffee = (items) => ({
@@ -17,5 +21,10 @@ export const setCoffee = (items) => ({
 
 export const setLoader = (payload) => ({
   type: 'SET_LOADED',
+  payload,
+});
+
+export const setError = (payload) => ({
+  type: 'SET_ERROR',
   payload,
 })

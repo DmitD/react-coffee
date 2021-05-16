@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from "prop-types";
 import Button from "../button";
 
 const CartItem = (props) => {
@@ -95,7 +95,24 @@ const CartItem = (props) => {
       </div>
     </div>
   )
-}
+};
+
+CartItem.propTypes = {
+  id: PropTypes.number,
+  title: PropTypes.string,
+  imageUrl: PropTypes.string,
+  type: PropTypes.string,
+  weight: PropTypes.number,
+  price: PropTypes.number,
+  count: PropTypes.number,
+  onPlus: PropTypes.func,
+  onMinus: PropTypes.func,
+  onRemove: PropTypes.func,
+};
+
+CartItem.defaultProps = {
+  title: '---',
+};
 
 export default CartItem
 

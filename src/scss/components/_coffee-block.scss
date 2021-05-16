@@ -1,18 +1,22 @@
 @import '../variables';
 
 .coffee-block {
-    width: 24%;
+    //width: 24%;
     text-align: center;
-    margin-bottom: 65px;
+    margin-bottom: 20px;
     border: 1px solid #e8eaec;
     border-radius: 5px;
     padding: 20px 0;
     transition: all linear 0.3s;
     //margin-right: 3%;
+
+    @media (max-width: 1090px) {
+      margin-bottom: 10px;
+    }
   
-     &:not(:nth-of-type(4n)) {
-       margin-right: 1%;
-     }
+    @media (max-width: 768px) {
+      margin-bottom: 5px;
+    }
 
      &:hover {
       box-shadow: 0 0 5px 0 #000;
@@ -20,6 +24,9 @@
   
     &__image {
       width: 50%;
+      @media (max-width: 768px) {
+        width: 30%;;
+      }
     }
   
     &__title {
@@ -28,6 +35,9 @@
       letter-spacing: 1px;
       margin-bottom: 10px;
       margin-top: 10px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
 
     &__ingredients {
@@ -44,5 +54,8 @@
       font-weight: 600;
       font-size: 20px;
       margin-top: 10px;
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
   }

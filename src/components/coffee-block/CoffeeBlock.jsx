@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import Button from "../button";
 
 const CoffeeBlock = (props) => {
@@ -54,6 +56,23 @@ const CoffeeBlock = (props) => {
       </div>
     </div >
   );
+};
+
+CoffeeBlock.propTypes = {
+  id: PropTypes.number,
+  title: PropTypes.string,
+  imageUrl: PropTypes.string,
+  ingredients: PropTypes.string,
+  description: PropTypes.string,
+  types: PropTypes.arrayOf(PropTypes.number).isRequired,
+  details: PropTypes.object.isRequired,
+  modalProductOpen: PropTypes.func,
+};
+
+CoffeeBlock.defaultProps = {
+  title: '---',
+  types: [],
+  details: {},
 };
 
 export default CoffeeBlock;

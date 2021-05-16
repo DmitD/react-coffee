@@ -1,16 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Link } from 'react-router-dom';
 import { useSelector } from "react-redux";
-
 import Button from "../button";
-
 
 const ModalOrder = (props) => {
 
   const availableTypes = ['зерно', 'молотый'];
   const availableWeight = ["sm", "md", "lg"];
-  const { openModal, closeModal, onClickAddItem } = props;
+  const { closeModal, onClickAddItem } = props;
   const currentItem = useSelector(({ modal }) => modal.openedItem);
   const { id, title, imageUrl, types, ingredients, description, details } = currentItem;
   const [activeType, setActiveType] = React.useState(types[0]);
@@ -49,12 +47,9 @@ const ModalOrder = (props) => {
       count: itemsCount,
     };
     onClickAddItem(obj);
-    closeModal()
   };
 
   return (
-    // <div className={openModal ? "modal modal-open" : "modal"}>
-    //   <div className={openModal ? "modal-order active" : "modal-order"}>
     <div className="modal modal-open">
       <div className="modal-order active">
         <div className="modal-order__remove">
@@ -182,16 +177,19 @@ const ModalOrder = (props) => {
             </svg>
             <span>Вернуться назад</span>
           </Button>
-          <Link to="/cart">
-            <Button className="button pay-btn"
-              onClick={onAddItemToCart}>
-              <span>В корзину</span>
-            </Button>
-          </Link>
+          <Button className="button pay-btn"
+            onClick={onAddItemToCart}>
+            <span>В корзину</span>
+          </Button>
         </div>
       </div>
     </div>
   )
-}
+};
+
+ModalOrder.propTypes = {
+  closeModal: PropTypes.func.isRequired,
+  onClickAddItem: PropTypes.func.isRequired,
+};
 
 export default ModalOrder;

@@ -104,7 +104,7 @@ const Cart = () => {
           <div className="content__items">
             {order.map((obj) => (
               <CartItem
-                key={obj.id}
+                key={`${obj.id}_${obj.weight}`}
                 id={obj.id}
                 title={obj.title}
                 imageUrl={obj.imageUrl}

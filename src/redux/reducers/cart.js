@@ -46,6 +46,8 @@ const cart = (state = initialState, action) => {
       case 'CLEAR_CART':
         draft.order = [];
         break;
+      default:
+        return state;
     }
     draft.totalCount = draft.order.reduce((sum, { count }) => sum + count, 0);
     draft.totalPrice = draft.order.reduce((sum, { price }) => sum + price, 0);

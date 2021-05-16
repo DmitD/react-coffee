@@ -10,19 +10,7 @@ const Header = () => {
 
   const { totalCount, totalPrice } = useSelector(({ cart }) => cart);
 
-  React.useEffect(() => {
-    window.onscroll = () => {
-      const header = document.querySelector(".header");
-      let scrollDistance = window.scrollY;
-      console.log(scrollDistance)
-      if (scrollDistance > 300) {
-        header.classList.add("header-fixed");
-      }
-      if (scrollDistance < 100) {
-        header.classList.remove("header-fixed");
-      }
-    }
-  }, []);
+
 
   return (
     <div className="header">
@@ -32,7 +20,7 @@ const Header = () => {
             <img width="60" height="60" src={logo} alt="Coffee logo" />
             <div className="header__logo__title">
               <h1>React Coffee</h1>
-              <p>самое вкусное кофе в мире</p>
+              <p>самое вкусное кофе</p>
             </div>
           </div>
         </Link>

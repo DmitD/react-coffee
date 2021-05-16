@@ -1,9 +1,12 @@
-const Categories = (props) => {
+import React from "react";
+import PropTypes from 'prop-types';
+
+const Categories = React.memo((props) => {
   const { items, activeCategory, onClickCategory } = props;
   return (
     <div className="categories">
       <ul>
-        <li 
+        <li
           className={activeCategory === null ? 'active' : ''}
           onClick={() => onClickCategory(null)}>
           Все
@@ -20,6 +23,17 @@ const Categories = (props) => {
       </ul>
     </div>
   );
+});
+
+Categories.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  activeCategory: PropTypes.number,
+  onClickCategory: PropTypes.func.isRequired,
+};
+
+Categories.defaultProps = {
+  items: [],
+  activeCategory: null,
 };
 
 export default Categories;

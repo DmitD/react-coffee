@@ -2,7 +2,7 @@
 
 .header {
   border-bottom: 1px solid $gray-line;
-  padding: 40px 0;
+  padding: 20px 0;
 
   .container {
     display: flex;
@@ -15,6 +15,11 @@
 
     img {
       margin-right: 15px;
+      @media (max-width: 768px) {
+        width: 30px;
+        height: 30px;
+        margin: auto 5px;
+      }
     }
 
     h1 {
@@ -23,11 +28,17 @@
       letter-spacing: 1%;
       text-transform: uppercase;
       font-weight: 800;
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
 
     p {
       color: #7b7b7b;
       white-space: nowrap;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
     }
 
     &__title {  
@@ -42,17 +53,20 @@
   left: 0;
   width: 100%;
   background-color: #fff;
-  animation: fixedMenu 1s forwards;
+  z-index: 1;
+  padding: 10px 0;
+  animation: fixedMenu 0.5s forwards;
 }
 
 @keyframes fixedMenu {
   0% {
-    padding: 40px 0;
-  }
-  50% {
-    padding: 25px 0;
+    opacity: 0;
+    //transform: scale(0.5);
   }
   100% {
-    padding: 10px 0;
+    opacity: 1;
+    //transform: scale(1);
   }
 }
+
+
