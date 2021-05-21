@@ -7,16 +7,30 @@
     border-top: 1px solid $gray-line;
     padding-top: 30px;
     margin-top: 30px;
+    @media (max-width: 768px) {
+      margin-top: 0;
+      flex-direction: column;
+      position: relative;
+    }
 
     &-img {
       display: flex;
       align-items: center;
       margin-right: 15px;
       width: 10%;
+      @media (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+        order: 1;
+      }
 
       img {
         width: 80px;
         height: 80px;
+        @media (max-width: 768px) {
+          width: 60px;
+          height: 60px;
+        }
       }
     }
 
@@ -37,6 +51,20 @@
         font-size: 18px;
         color: #8d8d8d;
       }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        order: 2;
+        text-align: center;
+        h3 {
+          font-size: 18px;
+          margin-bottom: 2px;
+          margin-top: 5px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
   }
 
     &-count {
@@ -56,6 +84,24 @@
       b {
         font-size: 22px;
         }
+
+        @media (max-width: 768px) {
+          order: 3;
+          width: 25%;
+          margin: 10px auto;
+  
+          .button {  
+            svg {
+              width: 8px;
+              height: 8px;
+            }
+          }
+  
+          b {
+            font-size: 14px;
+            padding: 0 5px;
+          }
+        }
       }
 
     &-price {
@@ -69,6 +115,16 @@
         font-size: 22px;
         letter-spacing: 0.01em;
       }
+
+      @media (max-width: 768px) {
+        order: 4;
+        justify-content: center;
+        margin: 0 auto;
+
+        b {
+          font-size: 16px;
+        }
+      }
     }
 
     &-remove {
@@ -76,6 +132,12 @@
       align-items: center;
       justify-content: flex-end;
       width: 4%;
+
+      @media (max-width: 768px) {
+        position: absolute;
+        right: 0;
+        width: auto;
+      }
 
       .button {
         border-color: darken($color: $gray-line, $amount: 10);
