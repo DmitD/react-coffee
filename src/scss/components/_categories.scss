@@ -3,8 +3,12 @@
 .categories {
     ul {
       display: flex;
+      @media (max-width: 1090px) {
+        margin-bottom: 40px;
+      }
       @media (max-width: 768px) {
         flex-direction: column;
+        margin-bottom: 0;
       }
   
       li {
